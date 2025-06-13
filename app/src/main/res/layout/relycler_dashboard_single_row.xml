@@ -8,7 +8,8 @@
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
     android:layout_gravity="center"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.HomeFragment"
+    android:id="@+id/bookCard">
 
     <LinearLayout
         android:layout_width="match_parent"
