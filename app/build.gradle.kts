@@ -48,12 +48,16 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+
     // Navigation (still hardcoded unless added to version catalog)
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 
     // DrawerLayout (still hardcoded unless added to version catalog)
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    implementation("com.android.volley:volley:1.2.1")
 
     // Testing
     testImplementation(libs.junit)

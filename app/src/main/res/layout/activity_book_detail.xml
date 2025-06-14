@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailActivity">
+
+    <!-- Toolbar for Back Button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?android:attr/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        android:title="Book Details"
+        app:navigationIcon="@drawable/ic_launcher_foreground"
+        app:navigationContentDescription="Back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- ScrollView to allow scrolling of content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Book Image with rounded corners -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="8dp"
+            android:radius="16dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Book Image" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Book Title -->
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Book Author(s) -->
+        <TextView
+            android:id="@+id/detail_authors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Read Book Button -->
+        <Button
+            android:id="@+id/read_book_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read Book"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#FF5733"
+            android:layout_marginBottom="16dp"
+            android:padding="14dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
